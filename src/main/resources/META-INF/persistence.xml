@@ -1,0 +1,25 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="LMS-PU">
+        <!-- Add your entities here -->
+        <class>Entities.User</class>
+        <class>Entities.User</class>
+        <class>Entities.Book</class>
+        <class>Entities.Borrowing</class>
+        <class>Entities.Librarian</class>
+        <class>Entities.Copy</class>
+        <class>Entities.Publisher</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./DBs/LibraryDB"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.validator.apply_to_ddl" value="true"/>
+            <property name="hibernate.validator.autoregister_listeners" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
